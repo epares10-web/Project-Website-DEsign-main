@@ -1,0 +1,230 @@
+/* Custom Color Variables for Vibrant Theming */
+:root {
+  --primary-gradient: linear-gradient(135deg, #FF0844 0%, #FFB199 100%);
+  --secondary-gradient: linear-gradient(135deg, #FF3366 0%, #BA265D 50%, #FF8C00 100%);
+  --vibrant-glow: linear-gradient(45deg, #ff007f, #7f00ff, #00f0ff, #ff007f);
+  --accent-color: #FF0844;
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --text-primary: #1a202c;
+  --text-muted: #4a5568;
+}
+
+/* Reset basic styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dynamic Animated Colorful Background */
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  background-attachment: fixed;
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Vibrant Hero Section */
+.hero {
+  background: var(--secondary-gradient);
+  color: #fff;
+  text-align: center;
+  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+  clip-path: ellipse(150% 100% at 50% 0%);
+  box-shadow: 0 10px 30px rgba(231, 60, 126, 0.4);
+}
+
+.profile-pic {
+  width: clamp(100px, 20vw, 130px);
+  height: clamp(100px, 20vw, 130px);
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  opacity: 0.95;
+  font-weight: 300;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Layout Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: clamp(1.5rem, 4vw, 3rem) auto;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #ffe3e3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+/* Centered Flexbox Layout */
+.vlog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  width: 100%;
+}
+
+/* Vlog Cards with Enhanced Glassmorphism & Fixed Sizing */
+.vlog-card {
+  flex: 1 1 280px;
+  max-width: 320px; /* Sized for portrait video cards */
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
+}
+
+/* Top accent line with rainbow gradient loop */
+.vlog-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--vibrant-glow);
+  background-size: 300% 300%;
+  animation: glowMove 4s ease infinite;
+  z-index: 2;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes glowMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Updated Video Styling for Portrait Vlogs */
+.video-wrapper {
+  aspect-ratio: 9 / 16; /* Matches portrait orientation */
+  max-height: 480px; /* Keeps card height controlled */
+  background-color: #000;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-wrapper video,
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: contain; /* Prevents zooming or cropping */
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Card Text Content */
+.vlog-content {
+  padding: 1.25rem;
+  flex-grow: 1;
+}
+
+.vlog-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.vlog-content p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Colorful Gradient Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #240b36 0%, #7932a8 100%);
+  color: #fff;
+  font-size: 0.95rem;
+  margin-top: auto;
+  box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effects only on non-touch screens to avoid mobile touch bugs */
+@media (hover: hover) {
+  .profile-pic:hover {
+    transform: scale(1.08) rotate(3deg);
+  }
+
+  .vlog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(231, 60, 126, 0.35);
+  }
+
+  .vlog-card:hover::before {
+    opacity: 1;
+  }
+
+  .vlog-card:hover video,
+  .vlog-card:hover iframe {
+    transform: scale(1.02);
+  }
+
+  .vlog-card:hover .vlog-content h3 {
+    color: var(--accent-color);
+  }
+}
+
+/* Media Query for Mobile Tweaks */
+@media (max-width: 600px) {
+  .hero {
+    clip-path: ellipse(200% 100% at 50% 0%);
+  }
+}
+
+/* Accessibility: Disable heavy background animation for users with motion preference */
+@media (prefers-reduced-motion: reduce) {
+  body, .vlog-card::before {
+    animation: none;
+  }
+}

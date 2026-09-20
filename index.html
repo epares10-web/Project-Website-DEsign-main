@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | 5-Day Vlog Series</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        /* Purple Gradient Animated Background */
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background: linear-gradient(-45deg, #2e0854, #4a154b, #6b11b0, #a124db);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Flexbox Layout to Automatically Center Remaining Cards */
+        .vlog-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .vlog-card {
+            flex: 1 1 300px;
+            max-width: 360px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Hero Section -->
+    <header class="hero">
+        <div class="profile-container">
+            <!-- Profile Image -->
+            <img src="https://uploads.onecompiler.io/445d6295r/1789032875051/marsiecakes.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>My Personal Vlog Portfolio &#128105;</h1>
+            <p>Welcome to my 5-Day "A Day in My Life" Vlog Series!</p>
+        </div>
+    </header>
+
+    <!-- Main Content: Vlog Series -->
+    <main class="container">
+        <h2 class="section-title">5-Day &#x1F4C5; "A Day in My Life" Vlog Series</h2>
+        
+        <div class="vlog-grid">
+
+            <!-- Day 1 -->
+<article class="vlog-card">
+    <div class="video-wrapper">
+        <video controls poster="Thumbnail/cd1.jfif">
+           <source src="videos/Day1-Vlog.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="vlog-content">
+        <h3>Day 1</h3>
+        <p>My Day 1 Vlog is Eating Dinner&#127860, Washing the dishes&#127869, Washing Clothes &#128085 and Bonding with my pet Spike&#128021</p>
+    </div>
+</article>
+
+            <!-- Day 2 -->
+            <article class="vlog-card">
+                <div class="video-wrapper">
+                    <video controls poster="Thumbnail/cd2.jfif">
+                        <source src="videos/Day2-Vlog.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="vlog-content">
+                    <h3>Day 2</h3>
+                    <p>.</p>
+                </div>
+            </article>
+
+            <!-- Day 3 -->
+            <article class="vlog-card">
+                <div class="video-wrapper">
+                    <video controls poster="Thumbnail/cd3.jfif">
+                        <source src="videos/Day3-Vlog.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="vlog-content">
+                    <h3>Day 3</h3>
+                    <p></p>
+                </div>
+            </article>
+
+            <!-- Day 4 -->
+            <article class="vlog-card">
+                <div class="video-wrapper">
+                    <video controls poster="https://via.placeholder.com/600x350?text=Day+4+Thumbnail">
+                        <source src="vlog-day4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="vlog-content">
+                    <h3>Day 4</h3>
+                    <p></p>
+                </div>
+            </article>
+
+            <!-- Day 5 -->
+            <article class="vlog-card">
+                <div class="video-wrapper">
+                    <video controls poster="https://via.placeholder.com/600x350?text=Day+5+Thumbnail">
+                        <source src="vlog-day5.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="vlog-content">
+                    <h3>Day 5</h3>
+                    <p>Reflecting on the week, unwinding with friends, and preparing for a relaxing weekend.</p>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Personal Vlog Portfolio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

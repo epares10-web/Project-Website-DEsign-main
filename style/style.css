@@ -1,9 +1,9 @@
 /* Custom Color Variables for Vibrant Theming */
 :root {
-  --primary-gradient: linear-gradient(135deg, #FF0844 0%, #FFB199 100%);
-  --secondary-gradient: linear-gradient(135deg, #FF3366 0%, #BA265D 50%, #FF8C00 100%);
-  --vibrant-glow: linear-gradient(45deg, #ff007f, #7f00ff, #00f0ff, #ff007f);
-  --accent-color: #FF0844;
+  --primary-gradient: linear-gradient(135deg, #DEB887 0%, #A52A2A 100%);
+  --secondary-gradient: linear-gradient(135deg, #DEB887 0%, #A52A2A 50%, #DEB887 100%);
+  --vibrant-glow: linear-gradient(45deg,#A0522D, #A52A2A, #A0522D, #8B4513);
+  --accent-color:#A0522D;
   --card-bg: rgba(255, 255, 255, 0.75);
   --text-primary: #1a202c;
   --text-muted: #4a5568;
@@ -19,7 +19,7 @@
 /* Dynamic Animated Colorful Background */
 body {
   font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #A0522D, #A52A2A, #A0522D, #8B4513);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   background-attachment: fixed;
@@ -39,7 +39,7 @@ body {
 /* Vibrant Hero Section */
 .hero {
   background: var(--secondary-gradient);
-  color: #fff;
+  color: #DEB887;
   text-align: center;
   padding: clamp(2.5rem, 5vw, 4rem) 1rem;
   clip-path: ellipse(150% 100% at 50% 0%);
@@ -50,7 +50,7 @@ body {
   width: clamp(100px, 20vw, 130px);
   height: clamp(100px, 20vw, 130px);
   border-radius: 50%;
-  border: 4px solid #fff;
+  border: 4px solid #DEB887;
   object-fit: cover;
   margin-bottom: 1rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);

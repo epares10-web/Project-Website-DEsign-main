@@ -183,8 +183,8 @@ body {
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  background: linear-gradient(135deg, #240b36 0%, #7932a8 100%);
-  color: #fff;
+  background: linear-gradient(135deg, #2b1209 0%, #4a1f11 100%);
+  color: #f4e1d2;
   font-size: 0.95rem;
   margin-top: auto;
   box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.2);
